@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Yellowtail&display=swap);
+
+.app-splash-screen{
+    background-image: linear-gradient(to right,#000428,#004e92);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: left 2.5s;
+
+    .app-splash-screen-inner{
+        font-size: 60px;
+        color: #f5f5f5;
+        text-align: center;
+        
+        .app-logo{
+            font-family: 'Rowdies', cursive;
+            text-transform: uppercase;
+        }
+    
+        .app-level{
+            font-family: 'Yellowtail', cursive;
+            font-size: 35px;
+        }
+
+        .app-loader{
+            background: url(../../assets/image/three-dots.svg);
+            background-repeat: no-repeat;
+            max-width: 100%;
+            height: 80px;
+            width: 80px; 
+            background-position: center;
+            background-size: contain;
+            position: relative;
+            left: 45%;
+        }
+    }
+    
+}
+
+
+
+// font-family: 'Rowdies', cursive;
+// font-family: 'Yellowtail', cursive;

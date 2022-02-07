@@ -1,1 +1,13 @@
-<p>splash-screen works!</p>
+<div 
+    class="app-splash-screen"
+    *ngIf="showSplash"
+    [ngStyle]="{ left : windowWidth }"
+    >
+    <div class="app-splash-screen-inner">
+        <div class="app-logo">Covid-19 Tracker</div>
+        <div class="app-level">Stay Home Stay Safe</div>
+        <div class="app-loader"></div>
+    </div>
+</div>
+
+<!--  -->
