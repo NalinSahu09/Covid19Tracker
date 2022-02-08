@@ -1,257 +1,64 @@
-<div class="container px-0">
-	<div class="covid19-symtoms fs-4"> Covid-19 Symtoms -</div>
-    <div class="row">
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="card">
+<div class="container">
+	<div class="covid19-symtoms fs-4"> Covid-19: Symtoms -</div>
+	<div class="row">
+		<div
+			class="col-md-3 col-sm-12 py-3 overflow-hidden"
+			*ngFor="let symtom of symtoms "
+		>
+			<div class="card h-100">
 				<img 
-					src="../../../assets/image/covid19-symptoms/high-fever-symptom.jpg"
+					src={{symtom.img}}
 					class="card-img-top"
-					alt="..."
+					alt="Covid-19: Symtoms"
 				>
 				<div class="card-body">
-					<p class="card-text text-center card-img-text fs-5"> High Fever </p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="card">
-				<img 
-					src="../../../assets/image/covid19-symptoms/dry-cough.jpg"
-					class="card-img-top"
-					alt="..."
-				>
-				<div class="card-body">
-					<p class="card-text text-center card-img-text fs-5"> Dry Cough </p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="card">
-				<img 
-					src="../../../assets/image/covid19-symptoms/sore-throat.jpg"
-					class="card-img-top"
-					alt="..."
-				>
-				<div class="card-body">
-					<p class="card-text text-center card-img-text fs-5"> Sore Throat</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="card">
-				<img 
-					src="../../../assets/image/covid19-symptoms/difficult-in-breathing.png"
-					class="card-img-top"
-					alt="..."
-				>
-				<div class="card-body">
-					<p class="card-text text-center card-img-text fs-5"> Difficult in Breathing </p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="card">
-				<img 
-					src="../../../assets/image/covid19-symptoms/headache.jpg" 
-					class="card-img-top"
-					alt="..."
-				>
-				<div class="card-body">
-					<p class="card-text text-center card-img-text fs-5"> Headache </p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="card">
-				<img 
-					src="../../../assets/image/covid19-symptoms/loss-teaste-smell.jpg" class="card-img-top"
-					alt="..."
-				>
-				<div class="card-body">
-					<p class="card-text text-center card-img-text fs-5">Loss Teast and Smell </p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="card">
-				<img 
-					src="../../../assets/image/covid19-symptoms/muscle-pain.jpg" 
-					class="card-img-top"
-					alt="..."
-				>
-				<div class="card-body">
-					<p class="card-text text-center card-img-text fs-5">Musce Pain</p>
+					<p class="card-text text-center card-img-text fs-5"> {{symtom.description}} </p>
 				</div>
 			</div>
 		</div>
 	</div>
+	<hr class="blue-color d-md-none d-lg-block">
 
+	<div class="covid19-spread fs-4 d-md-none d-lg-block"> Covid-19: How To Spread -</div>
+	<div class="row">
+		<div
+			class="col-md-3 col-sm-12 py-3 overflow-hidden d-md-none d-lg-block"
+			*ngFor="let howToSpread of howToSpreads "
+		>
+			<div class="flip-card">
+				<div class="flip-card-inner">
+				  	<div class="flip-card-front">
+						<img
+							src="{{howToSpread.img}}" 
+							alt="Avatar" 
+							class="w-100 h-100 p-3"
+						>
+				  	</div>
+					<div class="flip-card-back">
+						<p class="fs-4"> {{howToSpread.description}} </p>
+					</div>
+				</div>
+		  	</div>
+		</div>
+	</div>
 	<hr class="blue-color">
 
-	<div class="covid19-how-spreads fs-4"> How It Spreads -</div>
+	<div class="covid19-prevention fs-4"> Covid-19: Prevention -</div>
 	<div class="row">
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/1.Avoid handshake.jfif" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
+		<div
+			class="col-md-3 col-sm-12 py-3"
+			*ngFor="let prevention of preventions "
+		>
+			<div class="card card-height">
+				<img 
+					src={{prevention.img}}
+					class="card-img-top"
+					alt="Covid-19: Prevention"
+				>
+				<div class="card-body overflow-hidden">
+					<p class="card-text text-center card-img-text fs-5"> {{prevention.description}} </p>
 				</div>
-			  </div>
-			  
+			</div>
 		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/2.Avoid hug.jfif" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div> 
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/3.no using mask.png" 
-							alt="Avatar"
-							class="w-100 h-100" 
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/4.public place 2.jfif" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/5.publick place.jpg" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/6.senetize mobile.jfif" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/7.social geathering.png" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/8.touch social things.jfif" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div>
-		</div>
-
-		<div class="col-md-3 col-sm-12 py-3">
-			<div class="flip-card">
-				<div class="flip-card-inner">
-				  	<div class="flip-card-front">
-						<img
-							src="../../../assets/image/covid19-spread/9.without mask.png" 
-							alt="Avatar" 
-							class="w-100 h-100"
-						>
-				  	</div>
-					<div class="flip-card-back">
-						<p class="fs-2"> Avoid Hug </p>
-					</div>
-				</div>
-			  </div>
-		</div>
-
-		
-
 	</div>
-
 </div>

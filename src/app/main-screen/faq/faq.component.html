@@ -1,1 +1,14 @@
-<p>faq works!</p>
+<div class="container">
+	<p class="faq fs-4">Frequently Asked Questions</p>
+	<accordion 
+		[closeOthers]="oneAtATime"
+		class="text-blue fs-5"
+	>
+		<accordion-group 
+			*ngFor="let faq of faqs"
+			[heading]=faq.question
+		>
+		<p>{{faq.answer}}</p>
+		</accordion-group>
+	</accordion>
+</div>

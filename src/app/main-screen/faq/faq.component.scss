@@ -1,0 +1,36 @@
+.faq{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #004e92;
+}
+
+.text-blue{
+    color: #004e92;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+
+accordion-group {
+    ::ng-deep {
+        div {
+            &>div.panel-heading.card-header.panel-enabled {
+                background-color: transparent; 
+                border-color: none;
+            }
+            .btn-link {
+                color: blue;
+                text-decoration: none;
+                font-size: 18px;
+                box-shadow: none;
+                text-align: left;
+            }
+            .btn-link:hover{
+                color: #004e92;
+            }
+        }
+        &>div.panel-collapse.collapse.in.show>div {
+          background-color: hsla(210, 10%, 83%, 0.10); // change the expanded content style
+        }
+    }
+}

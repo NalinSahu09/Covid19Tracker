@@ -2,7 +2,9 @@
     background-color: #004e92;
     height: 5px;
 }
-.covid19-symtoms{
+.covid19-symtoms,
+.covid19-spread,
+.covid19-prevention{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
@@ -21,6 +23,10 @@
         font-weight: 800;
         color: #004e92;
     }
+}
+
+.card-height{
+    height: 220px;
 }
 
 .card:hover{
@@ -79,7 +85,7 @@
 
             p{
                 font-family: 'Roboto Condensed', sans-serif;
-                font-weight: 800;
+                font-weight: 400;
                 color: #f5f5f5; 
             }
         }

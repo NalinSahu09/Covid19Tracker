@@ -16,6 +16,10 @@ import { MenuComponent } from './other-screen/menu/menu.component';
 import { YoutubeLinksComponent } from './other-screen/youtube-links/youtube-links.component';
 import { FooterComponent } from './other-screen/footer/footer.component';
 
+import { AccordionConfig, AccordionModule } from 'ngx-bootstrap/accordion'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +38,11 @@ import { FooterComponent } from './other-screen/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    AccordionModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
