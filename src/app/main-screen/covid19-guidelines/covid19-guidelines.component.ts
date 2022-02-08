@@ -126,7 +126,7 @@ export class Covid19GuidelinesComponent implements OnInit {
 	},
 
     {
-		img:"../../../assets/image/covid19-prevention/Cover-Your-Nose.jpg", 
+		img:"../../../assets/image/covid19-prevention/cover-your-nose.jpg", 
 		description:"Cover Your Nose while Sneezing"
 	},
 
